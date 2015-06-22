@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tropapp</title>
+  <title>Product</title>
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<%= yield %>
+<%= render 'layouts/header' %>
 
+	<div class="container">
+        <!-- no equals sign is if you don't want something to show up on the page -->
+        <% flash.each do |name, msg| %>
+          <%= content_tag(:div, msg, class:"alert alert-#{name}") %>
+        <% end %>
+
+		<%= yield %>
+	</div>
 </body>
 </html>

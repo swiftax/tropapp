@@ -1,0 +1,30 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$body-bg: #e1e1e1;
+$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height: 45px;
+$navbar-inverse-bg: #0B71D3;
+$navbar-inverse-link-color: #fff; 
+$navbar-default-bg: white;
+$navbar-default-brand-color: #c0392b;
+$brand-primary: #04244A;
+$jumbotron-bg: #0B71D3;
+$jumbotron-color: #fff;
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+.center {
+     text-align: center;
+}
+
+.navbar-brand {
+     font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:active {
+	background-color: #000;
+	color: #fff;
+}

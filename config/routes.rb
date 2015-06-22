@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+
+get "about" => "pages#about" #for the path
+get "contact" => "pages#contact" #for the path
+
+  resources :products
 root 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
